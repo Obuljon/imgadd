@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container mt-5" style="width: 35rem;">
+        <h1><i class="bi bi-plus-circle-dotted text-primary"></i></h1>
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="img" class="form-label">Image</label>
+                <input type="file" class="form-control" id="img" name="img">
+            </div>
+            <button type="submit" class="btn btn-primary">Enter</button>
+        </form>
+        <% datas.forEach(item => { %> 
+        <img src="/img/<%= item.img %>" class="card-img-top" alt="...">
+        <% }) %>
+    </div>
+</body>
+</html>
